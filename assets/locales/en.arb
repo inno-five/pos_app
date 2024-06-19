@@ -1,0 +1,7 @@
+{
+    "log_in": "Log In",
+    "emial": "Email",
+    "password":"Password",
+    "forgot_password" : "Forgot Password?",
+    "register": "Register"
+}

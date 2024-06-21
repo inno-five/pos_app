@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PosAppTheme {
   static const primaryColor = Color(0xFFFF5C00);
@@ -8,24 +9,20 @@ class PosAppTheme {
   static const backgroundColor = Color(0xFF19191C);
 
   static const textColor = Color(0xFFFFFFFF);
+  static const linkColor = Color(0xFFFF5C00);
+  static const errorColor = Colors.red;
 
   static const activeButtonColor1 = BoxDecoration(color: secondaryColor);
 
   static const activeButtonColor2 = BoxDecoration(color: primaryColor);
 
-  static const ColorScheme lightColorScheme = ColorScheme.light(
-      primary: primaryColor,
-      secondary: secondaryColor,
-      surface: Colors.white,
-      brightness: Brightness.light,
-      onPrimary: Color(0xFF19191C));
+  static double defaultFontSize(String currentDevice) {
+    return currentDevice == "Desktop" ? 12.sp : 14.sp;
+  }
 
-  static const ColorScheme darkColorScheme = ColorScheme.dark(
-      primary: primaryColor,
-      secondary: secondaryColor,
-      surface: backgroundColor,
-      brightness: Brightness.dark,
-      onPrimary: Color(0xFFFFFFFF));
+  static double smallFontSize(String currentDevice) {
+    return currentDevice == "Desktop" ? 10.sp : 12.sp;
+  }
 }
 
 // Light Mode

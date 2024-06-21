@@ -3,5 +3,12 @@
     "emial": "อีเมล",
     "password": "รหัสผ่าน",
     "forgot_password": "ลืมรหัสผ่าน?",
-    "register": "ลงทะเบียน"
+    "register": "สร้างบัญชีใหม่",
+    "bussinessName":"ชื่อธุรกิจ",
+    "bussinessType":"ประเภทธุรกิจ",
+    "accept_terms": "ฉันยอมรับข้อกำหนดในการ",
+    "and": " และ ",
+    "service": "ให้บริการ",
+    "policy": "นโยบายความเป็นส่วนตัวของ POS",
+    "error_input":"กรุณากรอกข้อมูล"
 }

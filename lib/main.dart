@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentWidth = MediaQuery.of(context).size.width;
+    final currentHeight = MediaQuery.of(context).size.height;
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: ScreenUtilInit(
-        designSize: const Size(360, 690),
+        designSize: Size(currentWidth, currentHeight),
         child: MaterialApp(
           title: 'POS App',
           // NOTE:May use in future

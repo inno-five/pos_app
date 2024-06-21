@@ -39,18 +39,27 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Theme.of(context).colorScheme.surface,
-        child: Center(
-          child: Text('POS APP',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyLarge!
-                  .copyWith(fontSize: 16.sp, fontWeight: FontWeight.bold)),
-        ),
+    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+        image: isDarkMode
+            ? const AssetImage('assets/images/dark.png')
+            : const AssetImage('assets/images/light.png'),
+        fit: BoxFit.cover,
+      )),
+      // color: Theme.of(context).colorScheme.surface,
+      child: Center(
+        child: Text('POS APP',
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge!
+                .copyWith(fontSize: 16.sp, fontWeight: FontWeight.bold)),
       ),
-      // bode: BlocListener<>(),
     );
+    // bode: BlocListener<>(),
   }
 }

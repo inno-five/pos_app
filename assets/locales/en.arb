@@ -3,5 +3,12 @@
     "emial": "Email",
     "password":"Password",
     "forgot_password" : "Forgot Password?",
-    "register": "Register"
+    "register": "Create new account",
+    "bussinessName":"Bussiness Name",
+    "bussinessType":"Bussiness Type",
+    "accept_terms": "I accept the terms of ",
+    "and": " and ",
+    "service": "service",
+    "policy": "privacy policy of POS",
+    "error_input":"Please enter"
 }

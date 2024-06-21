@@ -12,6 +12,28 @@ class LogInProfile {
   }
 }
 
+class RegisterProfile {
+  late String email;
+  late String password;
+  late String bussinessName;
+  late String bussinessType;
+
+  RegisterProfile(
+      {required this.email,
+      required this.password,
+      required this.bussinessName,
+      required this.bussinessType});
+
+  factory RegisterProfile.fromJson(Map<String, dynamic> json) {
+    return RegisterProfile(
+      email: json['email'],
+      password: json['password'],
+      bussinessName: json['bussinessName'],
+      bussinessType: json['bussinessType'],
+    );
+  }
+}
+
 class AuthService {
   Future<bool> login(LogInProfile logInProfile) async {
     // NOTE:May use in future

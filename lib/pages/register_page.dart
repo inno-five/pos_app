@@ -374,7 +374,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             color: PosAppTheme.textColor,
                             padding: EdgeInsets.symmetric(horizontal: 50.w),
                             onPressed: () {
-                              _navigateToPage(context, AppPage.register);
+                              _navigateToPage(context, AppPage.login);
                             }),
                       ]),
                 ),

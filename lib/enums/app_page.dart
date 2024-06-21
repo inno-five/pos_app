@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pos_app/pages/login_page.dart';
+import 'package:pos_app/pages/pin_page.dart';
 import 'package:pos_app/pages/register_page.dart';
 import 'package:pos_app/pages/splash_page.dart';
 
-enum AppPage {
-  splash,
-  login,
-  register,
-  home,
-}
+enum AppPage { splash, login, register, home, pin }
 
 extension AppPageExtension on AppPage {
   Widget get page {
@@ -19,6 +15,8 @@ extension AppPageExtension on AppPage {
         return const LoginPage();
       case AppPage.register:
         return const RegisterPage();
+      case AppPage.pin:
+        return const PinPage();
       default:
         return const Text('Error: Invalid AppPage');
       // NOTE:May use in future

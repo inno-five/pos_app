@@ -16,6 +16,8 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+    // TODO:fetch user data
+    final userData = {"name": "dsdsdsds"};
     // NOTE:May use in future
     // Simulate some loading time (optional)
     Future.delayed(Duration(seconds: 5), () {
@@ -33,7 +35,8 @@ class _SplashPageState extends State<SplashPage> {
 
       Navigator.of(context).push(MaterialPageRoute(
           // builder: (context) => const MainPage(page: AppPage.login)));
-          builder: (context) => AppPage.login.page));
+          builder: (context) =>
+              userData != "" ? AppPage.pin.page : AppPage.login.page));
     });
   }
 
@@ -51,7 +54,6 @@ class _SplashPageState extends State<SplashPage> {
             : const AssetImage('assets/images/light.png'),
         fit: BoxFit.cover,
       )),
-      // color: Theme.of(context).colorScheme.surface,
       child: Center(
         child: Text('POS APP',
             style: Theme.of(context)

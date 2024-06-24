@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pos_app/enums/app_page.dart';
-import 'package:pos_app/pages/main_page.dart';
-import 'package:pos_app/theme/theme.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({super.key});
 
   @override
-  _SplashPageState createState() => _SplashPageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
 class _SplashPageState extends State<SplashPage> {
@@ -18,9 +15,10 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     // TODO:fetch user data
     final userData = {"name": "dsdsdsds"};
+    //  final userData = {};
     // NOTE:May use in future
     // Simulate some loading time (optional)
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       // Navigate to login page after delay
       // Navigator.of(context).pushReplacement(
       //   MaterialPageRoute(builder: (context) => AppPage.login),
@@ -36,7 +34,7 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.of(context).push(MaterialPageRoute(
           // builder: (context) => const MainPage(page: AppPage.login)));
           builder: (context) =>
-              userData != "" ? AppPage.pin.page : AppPage.login.page));
+              userData.isNotEmpty ? AppPage.pin.page : AppPage.login.page));
     });
   }
 

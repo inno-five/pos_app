@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 enum DeviceScreenType {
-  Mobile,
-  Tablet,
-  Desktop,
+  mobile,
+  tablet,
+  desktop,
 }
 
 class ResponsiveLayoutUtil {
@@ -11,20 +11,20 @@ class ResponsiveLayoutUtil {
     double deviceWidth = MediaQuery.of(context).size.width;
 
     if (deviceWidth > 950) {
-      return DeviceScreenType.Desktop;
+      return DeviceScreenType.desktop;
     } else if (deviceWidth > 600) {
-      return DeviceScreenType.Tablet;
+      return DeviceScreenType.tablet;
     } else {
-      return DeviceScreenType.Mobile;
+      return DeviceScreenType.mobile;
     }
   }
 
   static bool isMobile(BuildContext context) =>
-      getDeviceType(context) == DeviceScreenType.Mobile;
+      getDeviceType(context) == DeviceScreenType.mobile;
 
   static bool isTablet(BuildContext context) =>
-      getDeviceType(context) == DeviceScreenType.Tablet;
+      getDeviceType(context) == DeviceScreenType.tablet;
 
   static bool isDesktop(BuildContext context) =>
-      getDeviceType(context) == DeviceScreenType.Desktop;
+      getDeviceType(context) == DeviceScreenType.desktop;
 }

@@ -1,4 +1,3 @@
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pos_app/bloc/utils/localizations.dart';
@@ -6,7 +5,6 @@ import 'package:pos_app/utils/responsive.dart';
 import 'package:pos_app/widgets/active_button.dart';
 import 'package:pos_app/enums/app_page.dart';
 import 'package:pos_app/services/auth_service.dart';
-import 'package:pos_app/services/bussiness_service.dart';
 import 'package:pos_app/theme/theme.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -171,7 +169,6 @@ class _RegisterPageState extends State<RegisterPage> {
                                     });
                                   })),
                           validator: (value) {
-                            print(value);
                             if (value == null || value.isEmpty) {
                               return '${AppLocalizations.of(context)?.translate('error_input')} ${AppLocalizations.of(context)?.translate('password')}.';
                             }
@@ -218,7 +215,6 @@ class _RegisterPageState extends State<RegisterPage> {
                                 ),
                           ),
                           validator: (value) {
-                            print(value);
                             if (value == null || value.isEmpty) {
                               return '${AppLocalizations.of(context)?.translate('error_input')} ${AppLocalizations.of(context)?.translate('bussinessName')}.';
                             }
@@ -264,12 +260,9 @@ class _RegisterPageState extends State<RegisterPage> {
                               setState(() {
                                 selectedValue = value;
                               });
-                              print(
-                                  value); // Perform any additional actions when an item is selected
                             }
                           },
                           validator: (value) {
-                            print(value);
                             if (value == null || value.isEmpty) {
                               return '${AppLocalizations.of(context)?.translate('error_input')} ${AppLocalizations.of(context)?.translate('bussinessType')}.';
                             }

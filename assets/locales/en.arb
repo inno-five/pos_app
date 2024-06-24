@@ -10,5 +10,7 @@
     "and": " and ",
     "service": "service",
     "policy": "privacy policy of POS",
-    "error_input":"Please enter"
+    "error_input":"Please enter",
+    "enter_pin": "Enter PIN",
+    "clear": "Clear"
 }

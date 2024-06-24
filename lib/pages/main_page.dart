@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pos_app/enums/app_page.dart';
-import 'package:pos_app/theme/theme.dart';
 
 // class MainPage extends StatefulWidget {
 //   final AppPage page;
@@ -47,7 +47,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   late AppPage _selectedPage;
-  bool _isKeyboardVisible = false;
   bool _hideBottom = false;
   @override
   void initState() {
@@ -77,16 +76,16 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         leading: Container(),
         backgroundColor: Colors.redAccent,
-        title: Center(
+        title: const Center(
           child: Text(
-            'POSjiuius APP n',
+            'POS APP ',
             style: TextStyle(color: Colors.white),
           ),
         ),
       ),
       body: Container(
         // NOTE:May use in future
-        // padding: EdgeInsets.only(top: 50),
+        padding: EdgeInsets.only(top: 50.h),
         width: double.infinity,
         // decoration: BoxDecoration(
         //   gradient: LinearGradient(

@@ -35,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
     final isDesktop = ResponsiveLayoutUtil.isDesktop(context);
-    print("a${isDesktop}");
     return Container(
       color: Theme.of(context).colorScheme.surface,
       child: Container(

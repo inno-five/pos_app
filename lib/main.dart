@@ -5,6 +5,7 @@ import 'package:pos_app/bloc/app/app_bloc.dart';
 import 'package:pos_app/bloc/utils/localizations.dart';
 import 'package:pos_app/pages/splash_page.dart';
 import 'package:pos_app/theme/theme.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() {
@@ -44,14 +45,14 @@ class MyApp extends StatelessWidget {
           // home: const MainPage(page: AppPage.splash),
           localizationsDelegates: const [
             AppLocalizations.delegate,
-            // GlobalMaterialLocalizations.delegate,
-            // GlobalWidgetsLocalizations.delegate,
-            // GlobalCupertinoLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
           ],
-          // supportedLocales: const [
-          //   Locale('en', ''),
-          //   Locale('th', ''),
-          // ],
+          supportedLocales: const [
+            Locale('en', ''),
+            Locale('th', ''),
+          ],
         ),
       ),
     );
